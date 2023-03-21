@@ -93,6 +93,12 @@ const data = [
     },
 ]
 
+app.get("/", function (request, response) {
+    response.send('Welcome to Hall Booking App 🎉');
+});
+
+
+
 app.get("/roomData", function (request, response) {
     response.send(data);
 });
