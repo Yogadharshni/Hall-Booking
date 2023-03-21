@@ -110,5 +110,27 @@ app.get("/booked-details", function (request, response) {
 
 //to check the availability
 
+app.post("/to-book-hall", express.json(), function (request, response) {
+    let count = 0;
+    const newVal = request.body;
+    data.filter(({ Booked_date, Entry_time, Exit_time }) => {
+        if (
+            Booked_date === newVal.Booked_date &&
+            Entry_time === newVal.Entry_time &&
+            Exit_time === newVal.Exit_time
+        ) {
+            count++;
+        }
+    });
+    if (count == 0) {
+        data.push(newVal);
+        response.send("Data added");
+    } else {
+        response.send('Sorry! There is No Available Room on this Particular Date and Time');
+    }
 
-app.listen(PORT, () => console.log("SERVER IS CONNECTED"));
+    console.log(newVal);
+    console.log(count);
+});
+
+app.listen(PORT, () => console.log("Connected To Server!!"));
