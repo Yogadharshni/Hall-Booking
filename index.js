@@ -1,16 +1,16 @@
 import express from "express";
-// import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
 const PORT = 4000;
 const app = express();
 // app.use(express.json())
 
 
 
-// const MONGO_URL = "mongodb://127.0.0.1";
-// const client = new MongoClient(MONGO_URL); // dial
-// // Top level await
-// await client.connect(); // call
-// console.log("Mongo is connected !!!  ");
+const MONGO_URL = "mongodb://127.0.0.1";
+const client = new MongoClient(MONGO_URL); // dial
+// Top level await
+await client.connect(); // call
+console.log("Mongo is connected !!!  ");
 
 
 const room = {

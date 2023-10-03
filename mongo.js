@@ -82,3 +82,4 @@ db.rooms.insertOne({
     Amenities_in_room: "A/C or NON AC, Attached bathroom ,TV with cable , Dining options",
     Price_1_hour: 1000,
 })
+
