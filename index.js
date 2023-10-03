@@ -23,7 +23,7 @@ const data = [
         Roomname: "ABC hall",
         Room_Id: 120,
         Booked_status: "booked",
-        Customer_name: "Yogadharshni",
+        Customer_name: "bharanidharan",
         Booked_date: "1/03/2023",
         Entry_time: "8AM",
         Exit_time: "1PM",
